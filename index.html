@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kids Alphabet Keyboard</title>
+  <style>
+    body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fef6e4;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #ff8360;
+}
+
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  font-size: 24px;
+  padding: 20px;
+  background-color: #ffcc70;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.1s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: #ffd97d;
+}
+
+button:active {
+  transform: scale(1.1);
+  background-color: #ffa07a;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Alphabet Keyboard</h1>
+  <div class="keyboard" id="keyboard"></div>
+
+  <script>
+    const keyboard = document.getElementById('keyboard');
+
+// Generate A-Z buttons
+for (let i = 65; i <= 90; i++) {
+  const letter = String.fromCharCode(i);
+  const button = document.createElement('button');
+  button.textContent = letter;
+  button.addEventListener('click', () => playSound(letter));
+  keyboard.appendChild(button);
+}
+
+function playSound(letter) {
+  const audio = new Audio(`sounds/${letter}.mp3`);
+  audio.play();
+}
+
+  </script>
+</body>
+</html>
