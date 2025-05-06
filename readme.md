@@ -1,8 +1,11 @@
+## ABCD.. learning page for kids
+
+[https://vishwajeeta.github.io/sound_keyboard_kids/](https://vishwajeeta.github.io/sound_keyboard_kids/)
+
+![alphabet_kid](alphabet_kids.png)
 ```
 /project-folder
   ├─ index.html
-  ├─ style.css
-  ├─ script.js
   └─ /sounds
       ├─ A.mp3
       ├─ B.mp3
